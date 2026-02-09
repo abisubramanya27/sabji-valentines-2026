@@ -21,7 +21,7 @@ export default function Game3({ onSuccess, onFail }: Game3Props) {
   useEffect(() => {
     const initialItems: ImageItem[] = Array.from({ length: 9 }).map((_, i) => ({
       id: i + 1,
-      src: `/assets/game3/${i + 1}.jpeg`,
+      src: `./assets/game3/${i + 1}.jpeg`,
       order: i + 1,
     }));
     

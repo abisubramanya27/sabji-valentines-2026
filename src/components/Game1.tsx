@@ -12,8 +12,8 @@ export default function Game1({ onSuccess, onFail }: Game1Props) {
   const [status, setStatus] = useState<'idle' | 'success' | 'failed'>('idle');
 
   const images = [
-    { id: 1, src: '/assets/game1/real.jpg', isReal: true },
-    { id: 2, src: '/assets/game1/fake.jpg', isReal: false },
+    { id: 1, src: './assets/game1/real.jpg', isReal: true },
+    { id: 2, src: './assets/game1/fake.jpg', isReal: false },
   ];
 
   const handleSelect = (id: number, isReal: boolean) => {
