@@ -12,8 +12,8 @@ export default function Game1({ onSuccess, onFail }: Game1Props) {
   const [status, setStatus] = useState<'idle' | 'success' | 'failed'>('idle');
 
   const images = [
-    { id: 1, src: './assets/game1/real.jpg', isReal: true },
-    { id: 2, src: './assets/game1/fake.jpg', isReal: false },
+    { id: 1, src: `${import.meta.env.BASE_URL}assets/game1/real.jpg`, isReal: true },
+    { id: 2, src: `${import.meta.env.BASE_URL}assets/game1/fake.jpg`, isReal: false },
   ];
 
   const handleSelect = (id: number, isReal: boolean) => {
@@ -48,7 +48,7 @@ export default function Game1({ onSuccess, onFail }: Game1Props) {
               selected === null ? 'hover:scale-105 hover:shadow-xl' : ''
             } ${selected === img.id ? 'ring-4 ring-pink-500 scale-105' : ''}`}
           >
-            <img src={img.src} alt="Option" className="w-full h-64 object-cover" referrerPolicy="no-referrer" />
+            <img src={img.src} alt="Option" className="w-full h-96 object-cover" referrerPolicy="no-referrer" />
             
             {selected === img.id && (
               <div className="absolute inset-0 bg-black/20 flex items-center justify-center">

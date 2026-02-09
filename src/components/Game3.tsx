@@ -21,7 +21,7 @@ export default function Game3({ onSuccess, onFail }: Game3Props) {
   useEffect(() => {
     const initialItems: ImageItem[] = Array.from({ length: 9 }).map((_, i) => ({
       id: i + 1,
-      src: `./assets/game3/${i + 1}.jpeg`,
+      src: `${import.meta.env.BASE_URL}assets/game3/${i + 1}.jpeg`,
       order: i + 1,
     }));
     
@@ -105,7 +105,7 @@ export default function Game3({ onSuccess, onFail }: Game3Props) {
             <img
               src={item.src}
               alt={`Timeline ${item.id}`}
-              className="w-full aspect-square object-cover rounded-lg pointer-events-none"
+              className="w-full h-96 object-cover rounded-lg pointer-events-none"
               referrerPolicy="no-referrer"
             />
             {/* Optional: Show current position number for clarity */}
