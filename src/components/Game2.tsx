@@ -14,10 +14,10 @@ export default function Game2({ onSuccess, onFail }: Game2Props) {
 
   useEffect(() => {
     const initialImages = [
-      { id: 1, src: '/assets/game2/fake1.svg', isReal: false },
-      { id: 2, src: '/assets/game2/real.svg', isReal: true },
-      { id: 3, src: '/assets/game2/fake2.svg', isReal: false },
-      { id: 4, src: '/assets/game2/fake3.svg', isReal: false },
+      { id: 1, src: '/assets/game2/fake1.JPG', isReal: false },
+      { id: 2, src: '/assets/game2/real.jpeg', isReal: true },
+      { id: 3, src: '/assets/game2/fake2.PNG', isReal: false },
+      { id: 4, src: '/assets/game2/fake3.jpg', isReal: false },
     ];
     // Shuffle
     setImages(initialImages.sort(() => Math.random() - 0.5));
@@ -48,7 +48,7 @@ export default function Game2({ onSuccess, onFail }: Game2Props) {
         <p className="text-lg text-gray-700 mb-4 px-4">Looking at my first masterpiece that drew you closer.</p>
         <div className="flex justify-center mb-4">
           <img 
-            src="/assets/game2/masterpiece1.svg" 
+            src="/assets/game2/masterpiece1.jpeg" 
             alt="First Masterpiece" 
             className="w-48 h-64 object-cover rounded-2xl shadow-md border-4 border-pink-200" 
             referrerPolicy="no-referrer" 
